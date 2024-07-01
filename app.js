@@ -124,7 +124,6 @@ async function main(msg) {
             let gender = checkAuthStatus.gender;
             let findUserStatus = await findUser(bot, msg.chat.id, gender, matchCollection);
 
-            console.log(findUserStatus);
 
             if (findUserStatus.status === false || findUserStatus.status === "error") {
                 if (findUserStatus.status === "error") {
@@ -155,7 +154,7 @@ async function main(msg) {
 async function connectUser(data) {
     try {
 
-        let template = `/next နောက်တစ်ယောက်ရှာရန်\n\n/stop ရပ်တန့်ရန်\n\n https://t.me/talk_mm_bot`;
+        let template = `/next နောက်တစ်ယောက်ရှာရန်\n\n/stop ရပ်တန့်ရန်\n\n https://t.me/mitra_mm_bot`;
 
         const option = {
             keyboard: [
@@ -531,7 +530,6 @@ bot.onText(/\/mail/, async (msg) => {
 })
 
 bot.onText(/\/getAll/, async (msg) => {
-    console.log("code is here");
     let data = await collection.countDocuments();
     await bot.sendMessage(msg.chat.id, `Total users is ${data}`);
 })
