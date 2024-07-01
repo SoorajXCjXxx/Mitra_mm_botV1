@@ -1,0 +1,12 @@
+when my bot receives a chat  we are tacklnig everychat with 
+    ==> bot.on("message") that callback run everytime when bot a new message
+
+when bot runs it check alot of things like is message is "commad" or "listenMessage" and "listenMessage2" are true or not
+and does current user have parter to whoom he is talking run
+
+lets get start with "/start /find and find a new parter"
+they are resoverd keywords
+so when ever someone text /start or /find or find a new partner
+
+it will check does user already use starting message or not
+if uses does it he can use /command to cancel it or he can continue for selection which type of users he want girl or boy
